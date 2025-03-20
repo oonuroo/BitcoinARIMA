@@ -49,7 +49,7 @@ source("install_packages.R")
   ```R
 Rscript main.R
   ```
-## Outputs: Model predictions, metrics (RMSE, MAPE, R²), and plots in results/.
+## Outputs: Model predictions, metrics (RMSE, MAPE, R²) and plots in results.
 
 ## Project Structure
 - data/: Store input datasets (manually added).
