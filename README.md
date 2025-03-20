@@ -37,14 +37,18 @@ Developed as part of a study at Università di Padova, this project predicts Bit
 
 ## Running the Project
 ###   Clone the Repository:
+  ```R
 git clone https://github.com/oonuroo/BitcoinARIMA.git
 cd BitcoinARIMA
+  ```
 ### Install Packages:
+  ```R
 source("install_packages.R")
-
+  ```
 ###  Run the Analysis:
+  ```R
 Rscript main.R
-
+  ```
 ## Outputs: Model predictions, metrics (RMSE, MAPE, R²), and plots in results/.
 
 ## Project Structure
