@@ -33,7 +33,7 @@ Developed as part of a study at Università di Padova, this project predicts Bit
 - btc_search.xlsx: Monthly Google Trends for "Bitcoin" from Google Trends.
 - btc_onchain.xlsx: On-chain metrics from blockchain APIs.
 
-!! Place datasets in data/ or update paths in main.R.
+!! Place datasets in data/ or update paths in .R file
 
 ## Running the Project
 # Clone the Repository:
