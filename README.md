@@ -38,7 +38,7 @@ Developed as part of a study at Università di Padova, this project predicts Bit
 ## Running the Project
 ###   Clone the Repository:
   ```R
-git clone https://github.com/oonuroo/BitcoinARIMA.git
+git clone 'https://github.com/oonuroo/BitcoinARIMA.git'
 cd BitcoinARIMA
   ```
 ### Install Packages:
