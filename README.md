@@ -36,47 +36,47 @@ Developed as part of a study at Università di Padova, this project predicts Bit
 !! Place datasets in data/ or update paths in .R file
 
 ## Running the Project
-# Clone the Repository:
+###   Clone the Repository:
 - git clone https://github.com/oonuroo/BitcoinARIMA.git
 - cd BitcoinARIMA
-# Install Packages:
+### Install Packages:
 - source("install_packages.R")
 
-# Run the Analysis:
+###  Run the Analysis:
 Rscript main.R
 
-# Outputs: Model predictions, metrics (RMSE, MAPE, R²), and plots in results/.
+## Outputs: Model predictions, metrics (RMSE, MAPE, R²), and plots in results/.
 
-# Project Structure
+## Project Structure
 - data/: Store input datasets (manually added).
 - install_packages.R: Installs required R packages.
 - main.R: Full analysis script (preprocessing, modeling, visualization).
 - results/: Output plots (e.g., arima_plot.png, xgboost_importance.png).
 
 ## Methodology
-# Data Preprocessing
+### Data Preprocessing
 - Aggregated daily prices and on-chain data to monthly intervals.
 - Applied log transformations (e.g., log_Volume, DiffMean) to reduce skewness.
 - Dropped 4.1% missing on-chain data; retained outliers for market insights.
 - Decomposed prices into trend, seasonal, and residual components; differenced for stationarity (ADF p-value 0.03).
 
-# Feature Selection
+### Feature Selection
 - Correlation analysis: Active Addresses (0.28), Transaction Count (0.21), Google Trends (0.12).
 - VIF to remove multicollinearity, retaining TxCnt, AdrActCnt, TrendScore, etc.
 
-# Models
+### Models
 - MLR: Baseline, RMSE 15,758 USD (poor generalization).
 - ARIMA(2,0,3): Grid search optimized, RMSE 4,586 USD on test data.
 - SARMAX: Grid search applied, but often reverted to ARIMA(0,0,0), failing to converge.
 - XGBoost: Grid search over features and parameters (e.g., max_depth=3), RMSE ~17,418 USD.
 - Prophet: Grid search with regressors, RMSE 9,197 USD, excels at long-term trends.
 
-## Results
+### Results
 - ARIMA(2,0,3): Best performer (RMSE 4,586 USD, MAPE 8.43%), though it overestimates price declines.
 - Key Predictors: Active Addresses and Transaction Count moderately enhance accuracy.
 - Visualizations: See results/ for ARIMA forecasts, XGBoost feature importance, and more.
 
-## Limitations
+### Limitations
 - Short-term volatility remains challenging.
 - SARMAX struggles with weakly correlated external predictors.
 - XGBoost underperforms without extensive tuning.
