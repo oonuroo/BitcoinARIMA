@@ -1,5 +1,3 @@
-markdown
-
 # BitcoinARIMA
 
 Forecasts Bitcoin prices over a 6-month horizon using ARIMA(2,0,3), optimized via grid search, achieving an RMSE of 4,586 USD. Combines historical price data, Google Trends, and on-chain metrics (0.28 correlation with active addresses) to predict BTC price trends using R.
